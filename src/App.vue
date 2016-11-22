@@ -1,12 +1,8 @@
 <template>
   <div id="app">
     <mu-appbar title="Title" fullWidth>
-   
-    
-    <mu-icon-button  icon='keyboard_arrow_left' @click="back" slot="left"/>
- 
-    </mu-appbar> 
-   
+      <mu-icon-button  icon="arrow_back" @click="back" slot="left"/>
+    </mu-appbar>
      <router-view></router-view>
   </div>
 </template>
@@ -35,6 +31,6 @@ export default {
 
 <style>
 .mu-appbar-title{
-  text-align: center
+  /* 标题不要居中显示*/
 }
 </style>

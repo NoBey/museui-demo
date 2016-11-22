@@ -1,8 +1,7 @@
 <template>
-  <ul>
-    <li  v-for="item in checkoutList">
-    <router-link :to="item.path"> <mu-raised-button @click="changeindexstate"  :label="item.title" fullWidth/></router-link>
-     
+  <ul class="menus">
+    <li  v-for="item in checkoutList" class="menu-item">
+       <mu-raised-button @click="changeindexstate" :href="item.path" :label="item.title" fullWidth/>
    </li>
  </ul>
 </template>
@@ -29,3 +28,14 @@ export default {
   }
 }
 </script>
+
+<style>
+  .menus {
+    margin: 0;
+    padding: 0;
+    display: block
+  }
+  .menu-item {
+    padding: 16px;
+  }
+</style>
