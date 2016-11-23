@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <mu-appbar title="Title" fullWidth>
+    <mu-appbar :title=title fullWidth>
       <mu-icon-button  icon="arrow_back" @click="back" slot="left"/>
     </mu-appbar>
      <router-view></router-view>
@@ -8,22 +8,23 @@
 </template>
 
 <script>
-import index from './components/index'
-import { mapGetters } from 'vuex'
 import router from './router'
 export default {
   name: 'app',
-  components: {
-    index
+  data: function () {
+    return {
+      title: ''
+    }
   },
-  computed: {
-    ...mapGetters({
-      checkoutindexstate: 'checkoutindexstate'
-    })
+  mounted: function () {
+    this.setTitle()
   },
   methods: {
     back: function () {
       router.back()
+    },
+    setTitle: function () {
+      this.title = this.$route.name
     }
   }
 }
