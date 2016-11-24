@@ -1,7 +1,7 @@
 import * as types from '../mutation'
 import data from '../../api/autocomplete'
 const state = {
-  dataSource: [1, 2, 3, 4],
+  dataSource: [11, 22, 33, 44, 55],
   focusData: ['123456', '789723', '775873']
 }
 // getters
@@ -12,7 +12,6 @@ const getters = {
 // mutations
 const mutations = {
   [types.GET_DATASOUSE] (state, {dataSource}) {
-    console.log(dataSource)
     state.dataSource = dataSource
   }
 }

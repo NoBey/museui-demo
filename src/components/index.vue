@@ -1,7 +1,9 @@
 <template>
-  <ul class="menus" transition="fadeInLeft">
+  <ul class="menus">
     <li  v-for="item in checkoutList" class="menu-item">
-       <mu-raised-button  :href="item.path" :label="item.title" fullWidth/>
+    <router-link :to="item.path">
+       <mu-raised-button   :label="item.title" fullWidth/>
+       </router-link>
    </li>
  </ul>
 </template>

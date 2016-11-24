@@ -1,9 +1,9 @@
 <template>
-<div transition="fadeOutLeft">
+<div >
 <div>
 <h3>基本使用说明</h3>
-  <mu-auto-complete hintText="请随便输入点啥" @input="handleInput(1)" :dataSource='dataSource'/>
-  <mu-auto-complete hintText="请随便输入点啥" labelFloat label="full width" fullWidth @input="handleInput" :dataSource="dataSource"/>
+  <mu-auto-complete hintText="请随便输入点啥"  openOnFocus @input="handleInput(0)" :dataSource='data'/>
+  <mu-auto-complete hintText="请随便输入点啥" labelFloat label="full width" fullWidth @input="handleInput(0)" :dataSource="dataSource"/>
 </div>
 <br>
 <div>
@@ -27,13 +27,9 @@
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
-  data: function () {
-    return {
-      dataSource: [1, 2, 3, 4]
-    }
-  },
   computed: {
     ...mapGetters({
+      data: 'CheckoutDatasouse',
       focusData: 'CheckoutFocusData'
     })
   },

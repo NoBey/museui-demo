@@ -2,7 +2,7 @@
  * Mocking client-server processing
  */
 const _products = [
-  [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  [1111111111, 22222222, 33333333, 444444, 55555, 66, 77, 88, 99],
   [{
     value: 't1',
     text: '第一个Icon',
