@@ -35,4 +35,9 @@ const router = new Router({
    { path: '/Drawer', component: Drawer, name: '抽屉式导航' }
   ]
 })
+router.beforeEach((to, from, next) => {
+  next(vm => {
+    console.log(vm.title)
+  })
+})
 export default router

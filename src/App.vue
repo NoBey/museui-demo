@@ -18,6 +18,9 @@ export default {
       title: ''
     }
   },
+  watch: {
+    '$route': 'setTitle'
+  },
   mounted: function () {
     this.setTitle()
   },
