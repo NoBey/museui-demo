@@ -3,7 +3,11 @@
     <mu-appbar :title=title fullWidth>
       <mu-icon-button  icon="arrow_back" @click="back" slot="left"/>
     </mu-appbar>
-     <router-view></router-view>
+   <transition name="component-fade" mode="out-in">
+   <keep-alive>
+     <router-view ></router-view>
+     </keep-alive>  
+     </transition>
   </div>
 </template>
 
@@ -33,5 +37,11 @@ export default {
 <style>
 .mu-appbar-title{
   /* 标题不要居中显示*/
+}
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-active {
+  opacity: 0;
 }
 </style>

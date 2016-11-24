@@ -1,5 +1,5 @@
 <template>
-<div>
+<div transition="fadeOutLeft">
 <div>
 <h3>基本使用说明</h3>
   <mu-auto-complete hintText="请随便输入点啥" @input="handleInput(1)" :dataSource='dataSource'/>
