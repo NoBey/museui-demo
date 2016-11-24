@@ -2,7 +2,7 @@
 <div >
 <div>
 <h3>基本使用说明</h3>
-  <mu-auto-complete hintText="请随便输入点啥"  openOnFocus @input="handleInput(0)" :dataSource='data'/>
+  <mu-auto-complete hintText="请随便输入点啥"   :dataSource='data'/>
   <mu-auto-complete hintText="请随便输入点啥" labelFloat label="full width" fullWidth @input="handleInput(0)" :dataSource="dataSource"/>
 </div>
 <br>
