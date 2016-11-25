@@ -2,7 +2,7 @@
 <div >
 <div>
 <h3>基本使用说明</h3>
-  <mu-auto-complete hintText="请随便输入点啥"   :dataSource='data'/>
+  <mu-auto-complete hintText="regency"   :dataSource='data'/>
   <mu-auto-complete hintText="请随便输入点啥" labelFloat label="full width" fullWidth @input="handleInput(0)" :dataSource="dataSource"/>
 </div>
 <br>
@@ -27,6 +27,11 @@
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
+  data: function () {
+    return {
+      regency: '1101'
+    }
+  },
   computed: {
     ...mapGetters({
       data: 'CheckoutDatasouse',

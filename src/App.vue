@@ -36,6 +36,10 @@ export default {
 </script>
 
 <style>
+#app{
+  overflow: hidden;
+  width: 100%;
+}
 .mu-appbar-title{
   /* 标题不要居中显示*/
 }
@@ -46,7 +50,8 @@ export default {
   transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .slide-fade-enter, .slide-fade-leave-active {
-  padding-left: 100px;
+
+  /*margin-left: 10px;*/
   opacity: 0;
 }
 </style>
